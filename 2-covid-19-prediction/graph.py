@@ -16,7 +16,7 @@ def graph_cases(start_date, y_values, labels, filename):
 	plt.legend(loc="upper left")
 	plt.gcf().autofmt_xdate()
 
-	plt.savefig("foo.png")
+	plt.savefig(filename)
 
 def graph_predictions(start_date, total_infections, predicted_total_infections, daily_infections, predicted_daily_infections, location, filename):
 	now = start_date
