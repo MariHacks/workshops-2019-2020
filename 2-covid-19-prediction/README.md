@@ -1,6 +1,6 @@
 # 2-covid-19-prediction workshop
 
-This program pulls data from (John Hopkins CSSE COVID-19 GitHub repository)[https://github.com/CSSEGISandData/COVID-19], and performs data visualization and prediction.
+This program pulls data from [John Hopkins CSSE COVID-19 GitHub repository](https://github.com/CSSEGISandData/COVID-19), and performs data visualization and prediction.
 
 To run code, type in your terminal:
 
