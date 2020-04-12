@@ -2,11 +2,11 @@
 
 The code fron 2019-2020 workshops held by The Programming Club are uploaded in the folders in this repository.
 
-There are 2 ways to execute the code: on Repl.it and locally on your computer.
+There are 2 ways to execute the code: on [Repl.it](https://repl.it) and locally on your computer.
 
 ## Running code on Repl.it
 
-Copy all the files and their filenames from each sub-repository into a Repl.it environment. 
+Copy all the files and their filenames from each sub-repository into a [Repl.it](https://repl.it) environment. 
 
 Run the code, it should work!
 
