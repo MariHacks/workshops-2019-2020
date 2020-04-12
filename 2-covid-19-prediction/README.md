@@ -18,6 +18,6 @@ To modify the code, search for comments with `# TODO` and follow the suggested i
 
 **Disclaimer**: The predictions in this program are only intended for experimental and educational purposes, and are in no way predictions that are considered valid or that should be used to make decisions related to the COVID-19 pandemic. 
 
-*Example prediction projecetion*
+*Example prediction projection*
 
 ![Alt text](https://github.com/MariHacks/workshops-2019-2020/blob/master/2-covid-19-prediction/examples/predictions.png?raw=true)
