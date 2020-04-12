@@ -14,6 +14,10 @@ This will run the code and create 2 files: `cases.png` with all the recorded COV
 
 To modify the code, search for comments with `# TODO` and follow the suggested instructions to customize the program.
 
+## Important Disclaimer
+
 **Disclaimer**: The predictions in this program are only intended for experimental and educational purposes, and are in no way predictions that are considered valid or that should be used to make decisions related to the COVID-19 pandemic. 
 
-![Alt text](/examples/predictions.png)
+*Example prediction projecetion*
+
+![Alt text](https://github.com/MariHacks/workshops-2019-2020/blob/master/2-covid-19-prediction/examples/predictions.png?raw=true)
