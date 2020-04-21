@@ -18,7 +18,7 @@ def get_wit(user_input, auth_key):
 	encoded_input = requests.utils.quote(user_input, safe='')
 
 	headers =  {"Authorization": "Bearer "+os.getenv("AUTH_KEY")}
-	wit_url = "https://api.wit.ai/message?v=20200421&q="+encoded_input
+	wit_url = "https://api.wit.ai/message?v=20200421&n=8&q="+encoded_input
 
 	response = requests.get(wit_url, headers=headers)
 
