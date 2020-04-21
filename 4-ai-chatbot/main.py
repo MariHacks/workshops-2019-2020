@@ -4,7 +4,7 @@ import random
 
 def create_emotions_dict(sheet_id, sheet_api_key):
 
-	sheet_url = "https://sheets.googleapis.com/v4/spreadsheets/"+sheet_id+"/values/A:C?key="+sheet_api_key+"&majorDimension=columns"
+	sheet_url = "https://sheets.googleapis.com/v4/spreadsheets/"+sheet_id+"/values/A:D?key="+sheet_api_key+"&majorDimension=columns"
 	response = requests.get(sheet_url).json()
 	emotions_dict = dict()
 
@@ -27,17 +27,27 @@ def get_wit(user_input, auth_key):
 # get responses
 emotions_dict = create_emotions_dict(sheet_id=os.getenv("SHEET_ID"), sheet_api_key=os.getenv("SHEET_API_KEY"))
 
+print("My name is superbot! Talk to me:)")
+print()
+
 while True:
 	user_input = input("User: ")
 	response = get_wit(user_input, os.getenv("AUTH_KEY")).json()
 
 	# define goodbye
-	if response["entities"].get("bye") is not None:
-		if response["entities"]["bye"][0]["confidence"] > 0.9:
-			print("Goodbye!")
-			break
+	if response["entities"].get("bye") is not None and response["entities"]["bye"][0]["confidence"] > 0.9:
+		print("Goodbye!")
+		break
+
+	elif response["entities"].get("greetings") is not None and response["entities"]["greetings"][0]["confidence"] > 0.9:
+		print("Hello there!")
+			
 	
 	# define emotion response
-	if response["entities"].get("intent") is not None:
+	elif response["entities"].get("intent") is not None:
 		intent = response["entities"]["intent"][0]["value"]
-		print(random.choice(emotions_dict[intent])) 
+		print(random.choice(emotions_dict[intent]))
+	
+	else:
+		print(random.choice(emotions_dict["not_recognized"]))
+			
