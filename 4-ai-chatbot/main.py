@@ -42,12 +42,12 @@ while True:
 	elif response["entities"].get("greetings") is not None and response["entities"]["greetings"][0]["confidence"] > 0.9:
 		print("Hello there!")
 			
-	
 	# define emotion response
-	elif response["entities"].get("intent") is not None:
+	elif response["entities"].get("intent") is not None and response["entities"]["intent"][0]["confidence"] > 0.9:
 		intent = response["entities"]["intent"][0]["value"]
 		print(random.choice(emotions_dict[intent]))
 	
 	else:
 		print(random.choice(emotions_dict["not_recognized"]))
-			
+
+	print()			
